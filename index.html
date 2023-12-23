@@ -37,7 +37,7 @@
 
       <!-- elements -->
       <section class="elements">
-        <div class="element">
+        <!-- <div class="element">
           <img
             src="./images/taman.png"
             alt="Винодельня Шато-Тамань"
@@ -95,31 +95,112 @@
           />
           <h2 class="element__title">Карелия</h2>
           <button class="element__like" type="button"></button>
-        </div>
+        </div> -->
       </section>
 
-    <section class="popup">
-      <div class="popup__container">
-        <button class="popup__close-button" type="button" value="close" title="Закрыть без сохранения данных"></button>
-        <h2 class="popup__title">Редактировать профиль</h2>
-        <form class="popup__form" name="form-popup">
-        <input
-          name="name-input"
-          type="text"
-          class="popup__text popup__text_type_name"
-          placeholder="Имя"
-        />
-        <input
-          name="job-input"
-          type="text"
-          class="popup__text popup__text_type_about"
-          placeholder="О себе"
-        />
-        <button type="submit" class="popup__submit-btn">Сохранить</button>
-      </form>
+      <div class="popup" id="popupEditProfile">
+        <div class="popup__container">
+          <button
+            class="popup__close-button"
+            type="button"
+            id="popupEditProfileClose"
+            value="close"
+            title="Закрыть без сохранения данных"
+          ></button>
+          <h2 class="popup__title">Редактировать профиль</h2>
+          <form class="popup__form" name="form-popup" id="popupEditProfileForm">
+            <input
+              id="popupNameInput"
+              name="name-input"
+              type="text"
+              class="popup__text popup__text_type_name"
+              placeholder="Имя"
+            />
+            <input
+              id="popupJobInput"
+              name="job-input"
+              type="text"
+              class="popup__text popup__text_type_about"
+              placeholder="О себе"
+            />
+            <button
+              type="submit"
+              class="popup__submit-btn"
+              id="popupEditProfileSubmit"
+            >
+              Сохранить
+            </button>
+          </form>
+        </div>
       </div>
-    </section>
-  </main>
+
+      <div class="popup" id="popupAddCard">
+        <div class="popup__container">
+          <button
+            class="popup__close-button"
+            type="button"
+            id="popupAddCardClose"
+            value="close"
+            title="Закрыть без сохранения данных"
+          ></button>
+          <h2 class="popup__title">Добавить карточку</h2>
+          <form class="popup__form" name="form-popup" id="popupAddCardForm">
+            <input
+              id="popupCardInput"
+              name="card-input"
+              type="text"
+              class="popup__text popup__text_type_name"
+              placeholder="Название"
+            />
+            <input
+              id="popupLinkInput"
+              name="link-input"
+              type="link"
+              class="popup__text popup__text_type_about"
+              placeholder="Ссылка"
+            />
+            <button
+              type="submit"
+              class="popup__submit-btn"
+              id="popupAddCardSubmit"
+            >
+              Сохранить
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Окно просмотра фотографий -->
+    <div class="popup popup_content_image">
+      <div class="popup__image-box">
+        <figure class="popup__figure">
+          <button
+            id="popupImageClosed"
+            class="popup__close-button"
+            type="button"
+            value="close"
+            title="Закрыть"
+          ></button>
+          <img src="#" class="popup__image" alt="Изображение" />
+          <figcaption class="popup__image-caption">Image Caption</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Шаблон -->
+    <template id="element-template">
+      <li class="element">
+        <img src="#" alt="_" class="element__picture" />
+        <button
+          class="element__button-delete"
+          title="Удалить"
+          type="button"
+        ></button>
+        <h2 class="element__title"></h2>
+        <button class="element__like" title="Нравится"></button>
+      </li>
+    </template>
 
     <!-- footer -->
     <footer class="footer">
